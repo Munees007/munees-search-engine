@@ -1,0 +1,67 @@
+[
+  {
+    "url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "description": "The autonomous stack for every app and agent.",
+    "content": "Skip to contentCopy WordmarkCopy LogoDownload Brand AssetsBrand GuidelinesProductsAgent StackAI SDKAI GatewaySandboxPassportConnecteveCore PlatformSecurityContent DeliveryFluid ComputeObservabilityWorkflowsCI/CDToolsNext.jsVercel AgentVercel PluginOpen SourceDomains↗v0↗ResourcesLearnDocsAboutBlogChangelogKnowledge BaseBuildAI AppsWeb AppsMarketing SitesPlatformsCommerceExploreCustomersMarketplacePartner FinderAWSCommunity↗EnterprisePricingGet a DemoLog InSign UpAsk AIDashboardProductsAgent StackAI SDKAI GatewaySandboxPassportConnecteveCore PlatformSecurityContent DeliveryFluid ComputeObservabilityWorkflowsCI/CDToolsNext.jsVercel AgentVercel PluginOpen SourceDomains↗v0↗ResourcesLearnDocsAboutBlogChangelogKnowledge BaseBuildAI AppsWeb AppsMarketing SitesPlatformsCommerceExploreCustomersMarketplacePartner FinderAWSCommunity↗EnterprisePricingGet a DemoLog InSign UpShip 26 is coming to SFGet your ticketDrop to deployLoadingAgentic InfrastructureTo ship apps and agentsFor coding agentsFor coding agents to ship apps and agents automated by agents.Deploy nowTalk to salesFor coding agents to deploy in their native language, with Vercel's API, CLI, MCP, and Skills.To ship apps and agents in Sandboxed VMs, with durable backends, powered by hundreds of models.Automated by agents who autonomously investigate errors, plan fixes, and open PRs.Build agents on infrastructure that thinks like themNotion powers millions of agent conversations daily on Vercel.FeaturesDurable OrchestrationSandboxed EnvironmentsAI Model GatewayFluid ComputeShip apps that scale from zero to millions instantlyZapier serves over 100 million monthly website visits on Vercel.FeaturesGlobal DeliveryDeployment EnvironmentsServerless FunctionsWeb Application FirewallHost platforms that serve every customerMintlify powers documentation for over 20,000 companies on Vercel.FeaturesTenant IsolationDomain ManagementCustom SSL CertificatesPreview URLsRecently shippedA framework for building durable agents.VercelPassportPasaportePassaportoパスポートIss 2026PassportSecure every internal agent, app, and deployment with your identity provider.▲ vercel deployVercel CLI✓ Building image from Dockerfile.vercel✓ Stored image in your project's registry✓ Deployed to Fluid computeProduction: https://my-server.vercel.appContainersRun production workloads in isolated containers on Vercel.Built by you, or your agentsDeploy nowOnboard your agentPaste to your agentOnboard your agentAgent StackAI SDKAI GatewaySandboxWorkflowsConnectNewPassportNeweveNewCore PlatformCI/CDContent DeliveryFluid ComputeObservabilitySecurityPlatform SecurityWAFBot ManagementBotIDToolsVercel DropNewVercel AgentVercel PluginNewAgent SkillsDomainsv0FrameworkseveNewNext.jsNuxtSvelteKitNitroTurborepoTanstack StartFastAPIAll frameworksSDKsVercel SDKWorkflow SDKNewFlags SDKChat SDKNewQueues SDKNewStreamdownBuildAI AppsWeb AppsMarketing SitesPlatformsCommercePlatform EngineersDesign EngineersLearnDocsBlogChangelogKnowledge BaseAcademyArticlesCommunityIs AgenticExploreCustomersMarketplaceTemplatesPartner FinderVercel + AWSCompanyAboutCareersPressEventsStartupsShipped on VercelOpen Source ProgramEnterprisePricingHelpLegal & TrustPrivacy PolicyTerms of ServiceCookie PolicyDPAAcceptable Use PolicyLegal (all documents)Trust CenterStatusCookie PreferencesSocialGitHubXLinkedInYouTubeInstagramLoading status…Select a display theme:systemlightdark",
+    "keywords": []
+  },
+  {
+    "url": "https://munees.vercel.app",
+    "title": "Munees Portfolio",
+    "description": "Munees Portfolio",
+    "content": "HomeAboutProjectsSkillsEducationAchievementsContactAbout MeProjectsSkillsEducation & CertificationsMy academic background and continuous learning journey.AchievementsMilestones, recognition, and experiences from my journey.Let's ConnectOpen to internships, full-time roles, freelance projects, and collaborations.",
+    "keywords": []
+  },
+  {
+    "url": "https://logic-master.netlify.app/",
+    "title": "START",
+    "description": "",
+    "content": "LogicMaster: Aptitude & Code Fixing Clash Lets Begin... START",
+    "keywords": []
+  },
+  {
+    "url": "https://nextjs.org",
+    "title": "Next.js by Vercel - The React Framework for the Web",
+    "description": "Used by some of the world's largest companies, Next.js enables you to create full-stack Web applications by extending the latest React features.",
+    "keywords": [
+      "react",
+      "framework",
+      "next.js",
+      "vercel",
+      "seo",
+      "web",
+      "javascript"
+    ],
+    "content": "Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more."
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/",
+    "title": "MDN Web Docs",
+    "description": "The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
+    "keywords": [
+      "html",
+      "css",
+      "javascript",
+      "web",
+      "development",
+      "mdn",
+      "mozilla"
+    ],
+    "content": "Resources for developers, by developers. Documenting web technologies, including CSS, HTML, and JavaScript, since 2005."
+  },
+  {
+    "url": "https://berkshirehathaway.com",
+    "title": "Berkshire Hathaway Inc.",
+    "description": "",
+    "keywords": [],
+    "content": "Official Home Page. A Message from Warren E. Buffett. GEICO, BNSF, Berkshire Hathaway Energy. Letters to shareholders."
+  },
+  {
+    "url": "https://craigslist.org",
+    "title": "craigslist",
+    "description": "",
+    "keywords": [],
+    "content": "craigslist provides local classifieds and forums for jobs, housing, for sale, services, local community, and events"
+  }
+]
