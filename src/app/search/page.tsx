@@ -5,19 +5,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState, Suspense } from 'react';
 import Link from 'next/link';
-
-interface SearchResult {
-  url: string;
-  title: string;
-  description: string;
-  score: number;
-  breakdown: {
-    title: number;
-    keyword: number;
-    description: number;
-    content: number;
-  };
-}
+import { searchIndex, SearchResult } from '@/lib/indexer';
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -26,22 +14,25 @@ function SearchContent() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!query) return;
+    if (!query) {
+      setResults([]);
+      return;
+    }
 
-    const fetchResults = async () => {
-      setLoading(true);
+    setLoading(true);
+    // Add small delay to simulate search latency
+    const timer = setTimeout(() => {
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-        const data = await res.json();
-        setResults(data.results || []);
+        const data = searchIndex(query);
+        setResults(data);
       } catch (err) {
         console.error(err);
       } finally {
         setLoading(false);
       }
-    };
+    }, 300);
 
-    fetchResults();
+    return () => clearTimeout(timer);
   }, [query]);
 
   return (

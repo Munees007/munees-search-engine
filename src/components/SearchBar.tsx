@@ -6,6 +6,7 @@ import { FaSearch } from 'react-icons/fa';
 import Logo from '../../public/images/Logo.png';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { searchIndex } from '@/lib/indexer';
 
 export const SearchBar = () => {
   const [query, setQuery] = useState('');
@@ -32,11 +33,10 @@ export const SearchBar = () => {
     }
     
     // Debounce search query
-    const timeoutId = setTimeout(async () => {
+    const timeoutId = setTimeout(() => {
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-        const data = await res.json();
-        setSuggestions(data.results?.slice(0, 5) || []);
+        const results = searchIndex(query);
+        setSuggestions(results.slice(0, 5));
       } catch (e) {
         console.error(e);
       }

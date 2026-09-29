@@ -3,7 +3,7 @@
 import { NavBar } from '@/components/NavBar';
 import { useState } from 'react';
 import Link from 'next/link';
-import { IndexedPage } from '@/lib/indexer';
+import { IndexedPage, saveToIndex, seedIndex } from '@/lib/indexer';
 
 export default function CrawlerPage() {
   const [url, setUrl] = useState('');
@@ -40,6 +40,9 @@ export default function CrawlerPage() {
       await new Promise(r => setTimeout(r, 800));
       setStatus('indexing');
       
+      // Save to localStorage!
+      saveToIndex(data.data);
+      
       await new Promise(r => setTimeout(r, 800));
       setStatus('ready');
       setResult(data.data);
@@ -50,18 +53,13 @@ export default function CrawlerPage() {
     }
   };
 
-  const handleLoadDemo = async () => {
+  const handleLoadDemo = () => {
     setSeeding(true);
     try {
-      const res = await fetch('/api/seed', { method: 'POST' });
-      const data = await res.json();
-      if (data.success) {
-        alert(`Successfully loaded ${data.added} demo sites!`);
-      } else {
-        alert('Failed to load demo sites.');
-      }
+      const added = seedIndex();
+      alert(`Successfully loaded ${added} demo sites into your local storage!`);
     } catch (err) {
-      alert('Error connecting to the server.');
+      alert('Error saving to local storage.');
     } finally {
       setSeeding(false);
     }

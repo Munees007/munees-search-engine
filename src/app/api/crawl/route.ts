@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as cheerio from 'cheerio';
-import { saveToIndex, IndexedPage } from '@/lib/indexer';
 
 export async function POST(req: NextRequest) {
   try {
@@ -34,7 +33,7 @@ export async function POST(req: NextRequest) {
     const content = $('body').text().replace(/\s+/g, ' ').trim();
 
     // Create the index object
-    const pageData: IndexedPage = {
+    const pageData = {
       url,
       title,
       description,
@@ -42,12 +41,10 @@ export async function POST(req: NextRequest) {
       keywords,
     };
 
-    // 4. Store in index
-    saveToIndex(pageData);
-
     return NextResponse.json({ success: true, data: pageData });
   } catch (error) {
     console.error('Crawl Error:', error);
     return NextResponse.json({ error: 'Failed to crawl the URL' }, { status: 500 });
   }
 }
+
