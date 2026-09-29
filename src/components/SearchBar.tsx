@@ -90,7 +90,7 @@ export const SearchBar = () => {
               <FaSearch size={14} className="text-gray-500" />
               <div className="flex flex-col">
                 <span className="text-white text-sm">{s.title}</span>
-                <span className="text-gray-500 text-xs truncate max-w-[400px]">{s.url}</span>
+                <span className="text-gray-500 text-xs truncate max-w-100">{s.url}</span>
               </div>
             </div>
           ))}
