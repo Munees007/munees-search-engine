@@ -17,6 +17,7 @@ export async function POST(req: NextRequest) {
     
     const html = await response.text();
 
+    console.log(html)
     // 2. Load into Cheerio for parsing
     const $ = cheerio.load(html);
 

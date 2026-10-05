@@ -47,16 +47,29 @@ export const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
+    const trimmedQuery = query.trim();
+    
+    if (trimmedQuery) {
       setShowSuggestions(false);
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+      
+      // If user types a full URL, redirect to crawler and auto-crawl
+      if (trimmedQuery.startsWith('http://') || trimmedQuery.startsWith('https://')) {
+        router.push(`/crawler?url=${encodeURIComponent(trimmedQuery)}&auto=true`);
+      } else {
+        router.push(`/search?q=${encodeURIComponent(trimmedQuery)}`);
+      }
     }
   };
 
   const handleSuggestionClick = (title: string) => {
     setQuery(title);
     setShowSuggestions(false);
-    router.push(`/search?q=${encodeURIComponent(title)}`);
+    
+    if (title.startsWith('http://') || title.startsWith('https://')) {
+      router.push(`/crawler?url=${encodeURIComponent(title)}&auto=true`);
+    } else {
+      router.push(`/search?q=${encodeURIComponent(title)}`);
+    }
   };
 
   return (

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Simple Online Calculator for Basic Math</title>
+    <meta
+        name="description"
+        content="Use this free simple online calculator to add, subtract, multiply, and divide. Enter expressions with your keyboard or use the calculator keys."
+    >
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#212529">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center min-vh-100 py-4">
+    <main class="container d-flex flex-column align-items-center gap-4">
+        <section class="card p-3 bg-dark" aria-labelledby="calculator-title" style="width: min(100%, 24rem);">
+            <h1 id="calculator-title" class="fw-bold text-center fs-3 text-white">Free Simple Online Calculator</h1>
+            <div class="d-flex flex-column">
+                <label for="exp" class="visually-hidden">Enter a math expression</label>
+                <input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="Enter a math expression" id="exp" class="form-control form-control-lg fw-bold" aria-describedby="calculator-help">
+                <div id="buttons" class="card p-2 mt-2 gap-2" style="grid-template-columns: repeat(4,1fr);display: grid;" role="group" aria-label="Calculator keys"></div>
+            </div>
+            <p id="calculator-help" class="text-center text-light small mt-2 mb-0">Enter an expression with your keyboard or use the calculator keys.</p>
+        </section>
+
+        <article class="w-100" style="max-width: 48rem;">
+            <header class="mb-3">
+                <h2 class="h4">How to use this simple calculator</h2>
+                <p class="text-secondary mb-0">Type a math expression into the display, then press Enter to calculate it. You can also select the on-screen keys. Use C to remove the last character, or AC to clear the entire expression and start again.</p>
+            </header>
+
+            <section aria-labelledby="supported-math">
+                <h2 id="supported-math" class="h5">Basic math operations</h2>
+                <p class="text-secondary">This free online calculator supports addition, subtraction, multiplication, division, and percentages. Use parentheses to group parts of an expression, such as (8 + 2) * 3. You can enter numbers and operators from your keyboard, use Backspace to edit, or press Delete to clear the display.</p>
+            </section>
+        </article>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

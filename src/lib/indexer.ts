@@ -8,6 +8,58 @@ export interface IndexedPage {
   keywords: string[];
 }
 
+export interface SeoCheck {
+  label: string;
+  passed: boolean;
+  detail: string;
+}
+
+export interface SeoAssessment {
+  score: number;
+  isGood: boolean;
+  checks: SeoCheck[];
+}
+
+export function assessSeo(page: IndexedPage): SeoAssessment {
+  const titleLength = page.title.trim().length;
+  const descriptionLength = page.description.trim().length;
+  const contentLength = page.content.trim().length;
+  const checks: SeoCheck[] = [
+    {
+      label: 'Page title',
+      passed: titleLength > 0,
+      detail: titleLength > 0 ? 'A title is present.' : 'Add a page title.',
+    },
+    {
+      label: 'Title length',
+      passed: titleLength >= 30 && titleLength <= 60,
+      detail: `${titleLength} characters (recommended: 30–60).`,
+    },
+    {
+      label: 'Meta description',
+      passed: descriptionLength > 0,
+      detail: descriptionLength > 0 ? 'A description is present.' : 'Add a meta description.',
+    },
+    {
+      label: 'Description length',
+      passed: descriptionLength >= 120 && descriptionLength <= 160,
+      detail: `${descriptionLength} characters (recommended: 120–160).`,
+    },
+    {
+      label: 'Page content',
+      passed: contentLength >= 300,
+      detail: `${contentLength} characters of text (recommended: at least 300).`,
+    },
+  ];
+  const score = Math.round((checks.filter(check => check.passed).length / checks.length) * 100);
+
+  return {
+    score,
+    isGood: score >= 60,
+    checks,
+  };
+}
+
 export const defaultSites: IndexedPage[] = [
   {
     url: "https://nextjs.org",
